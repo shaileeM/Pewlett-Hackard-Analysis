@@ -23,3 +23,20 @@ The purpose of this analysis is :
 
 - We can see that out of 90k employees ready for retirement, 1500 employees are eligible for mentorship program. 
 - Employees from all the department except manager are eligible to mentor new joinee. 
+
+## Summary
+
+### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+1. Mainly the commany would need to hire manager level employees to fulfill the requirement followed by Assistant engineers and Technique leaders.
+
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+1. Company only has around 2% of retirement-ready employees eligible for mentor program which seems less for the total company population of 300k. 
+
+### Additional query or tables
+1. Having grouped number of employees based on the title from the retirement-ready list would provide more insight to understand if enough qualified
+   staff is there or not. 
+- Query to do so : 
+	select mentorship_eligibilty.title, count(mentorship_eligibilty.emp_no)
+	from mentorship_eligibilty
+	group by mentorship_eligibilty.title
+![](./Resources/Additional.PNG)
