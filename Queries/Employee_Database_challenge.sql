@@ -27,3 +27,15 @@ into retiring_titles_table
 from unique_titles_table as utt
 group by utt.title
 order by count desc
+
+-Deliverable 2
+
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+e.first_name,e.last_name,e.birth_date,
+de.from_date,de.to_date,
+te.title
+--into 
+from employees as e
+inner join dept_employees as de on e.emp_no=de.emp_no
+inner join titles as te on e.emp_no=te.emp_no
+order by e.emp_no
