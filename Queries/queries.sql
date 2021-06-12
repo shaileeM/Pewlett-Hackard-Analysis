@@ -86,3 +86,10 @@ select ce.first_name, ce.last_name,ce.emp_no,d.dept_name
 from current_emp as ce
 inner join dept_employees as de on ce.emp_no=de.emp_no
 inner join departments as d on de.dept_no=d.dept_no
+
+--tailor list for only sales ans development dept
+select ce.first_name, ce.last_name,ce.emp_no,d.dept_name
+from current_emp as ce
+inner join dept_employees as de on ce.emp_no=de.emp_no
+inner join departments as d on de.dept_no=d.dept_no
+where dept_name in ('Sales','Development')
