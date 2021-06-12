@@ -80,3 +80,9 @@ FROM dept_manager AS dm
         ON (dm.dept_no = d.dept_no)
     INNER JOIN current_emp AS ce
         ON (dm.emp_no = ce.emp_no);
+
+--current_emp with department name
+select ce.first_name, ce.last_name,ce.emp_no,d.dept_name
+from current_emp as ce
+inner join dept_employees as de on ce.emp_no=de.emp_no
+inner join departments as d on de.dept_no=d.dept_no
