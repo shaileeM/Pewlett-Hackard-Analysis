@@ -40,3 +40,4 @@ The purpose of this analysis is :
 	from mentorship_eligibilty
 	group by mentorship_eligibilty.title
 ![](./Resources/Additional.PNG)
+2. Having included the salary for these retirement-ready employees would help to decide for future hire's training cost. 
