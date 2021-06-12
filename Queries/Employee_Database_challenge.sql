@@ -34,8 +34,12 @@ SELECT DISTINCT ON (e.emp_no) e.emp_no,
 e.first_name,e.last_name,e.birth_date,
 de.from_date,de.to_date,
 te.title
---into 
+into mentorship_eligibilty
 from employees as e
 inner join dept_employees as de on e.emp_no=de.emp_no
 inner join titles as te on e.emp_no=te.emp_no
+WHERE de.to_date = ('9999-01-01') and
+e.birth_date between '1965-01-01' and '1965-12-31'
 order by e.emp_no
+
+select * from mentorship_eligibilty
